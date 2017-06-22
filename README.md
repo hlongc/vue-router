@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # clitest
 
 > A Vue.js project
@@ -19,3 +20,7 @@ npm run build --report
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+=======
+# vue-router
+vue-router的简单例子
+>>>>>>> f990f12470bf68aa6689b92c4aca7c1b33ab7a2d
