@@ -4,6 +4,8 @@ import Hello from '@/components/Hello'
 import Hi from '@/components/Hi' 
 import hi1 from '@/components/hi1' 
 import hi2 from '@/components/hi2' 
+import left from '@/components/left' 
+import right from '@/components/right'
 
 Vue.use(Router)
 
@@ -12,7 +14,11 @@ export default new Router({
     {
       path: '/',
       name: 'Hello',
-      component: Hello
+      components: {
+          default:Hello,
+          left:left,
+          right:right
+      }
     },
     {
         path:'/Hi',
@@ -22,6 +28,14 @@ export default new Router({
             {path:'hi1',name:'hi1',component:hi1},
             {path:'hi2',name:'hi2',component:hi2}
         ]
+    },
+    {
+        path:'/H1',
+        components:{
+          default:Hello,
+          left:right,
+          right:left
+        }
     }
   ]
 })

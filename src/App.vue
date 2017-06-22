@@ -6,6 +6,8 @@
         <router-link :to="{name:'Hi',params:{username:'胡龙超',pwd:'xfdd'}}">Hi</router-link>
     </div>
     <router-view></router-view>
+    <router-view name="left"></router-view>
+    <router-view name="right"></router-view>
   </div>
 </template>
 
