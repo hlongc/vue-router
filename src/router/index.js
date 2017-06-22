@@ -6,6 +6,7 @@ import hi1 from '@/components/hi1'
 import hi2 from '@/components/hi2' 
 import left from '@/components/left' 
 import right from '@/components/right'
+import Params from '@/components/params'
 
 Vue.use(Router)
 
@@ -36,6 +37,19 @@ export default new Router({
           left:right,
           right:left
         }
+    },
+    {
+        path:'/params/:infoXM/:infoSex',
+        component:Params
+    },
+    {
+        path:'/re',
+        redirect:'/'
+    },
+    {
+        path:'/hi1',
+        component:hi1,
+        alias:'/other'
     }
   ]
 })
