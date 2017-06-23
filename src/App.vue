@@ -1,12 +1,16 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
+    <button @click="forword">前进</button>
+    <button @click="returns">返回</button>
+    <button @click="gohome">返回主页</button>
     <div>
         <router-link to="/">主页</router-link>|
         <router-link :to="{name:'Hi',params:{username:'胡龙超',pwd:'xfdd'}}">Hi</router-link>
         <router-link to="/params/胡龙超/男">params</router-link>
         <router-link to="/re">redirect</router-link>
         <router-link to="/other">other</router-link>
+        <router-link to="/55465445">404</router-link>
     </div>
     <transition name="fade" mode="out-in">
         <router-view></router-view>
@@ -18,7 +22,18 @@
 
 <script>
 export default {
-  name: 'app'
+  name: 'app',
+  methods:{
+      forword(){
+          this.$router.go(1);
+      },
+      returns(){
+          this.$router.go(-1);
+      },
+      gohome(){
+          this.$router.push('/');
+      }
+  }
 }
 </script>
 

@@ -12,6 +12,14 @@
             return{
                 msg:'params页面'
             }
+        },
+        beforeRouteEnter:(to,from,next)=>{
+            console.log("准备进入params");
+            next();
+        },
+        beforeRouteLeave:(to,from,next)=>{
+            console.log("准备离开params");
+            next();
         }
     }
 </script>

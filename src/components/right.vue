@@ -1,6 +1,7 @@
 <template>
     <p class="right">{{msg}}</p>
 </template>
+
 <script>
     export default{
         name:'right',
@@ -11,7 +12,7 @@
         }
     }
 </script>
-<style>
+<style scoped="true">
     .right{
         float:left;
         height:200px;

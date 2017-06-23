@@ -7,10 +7,12 @@ import hi2 from '@/components/hi2'
 import left from '@/components/left' 
 import right from '@/components/right'
 import Params from '@/components/params'
+import error from '@/components/Error'
 
 Vue.use(Router)
 
 export default new Router({
+  mode:'history',//history是去掉#,hash是加上#
   routes: [
     {
       path: '/',
@@ -40,7 +42,12 @@ export default new Router({
     },
     {
         path:'/params/:infoXM/:infoSex',
-        component:Params
+        component:Params/*,
+        beforeEnter:(to,from,next)=>{
+            console.log(to);
+            console.log(from);
+            next();
+        }*/
     },
     {
         path:'/re',
@@ -50,6 +57,10 @@ export default new Router({
         path:'/hi1',
         component:hi1,
         alias:'/other'
+    },
+    {
+        path:'*',
+        component:error
     }
   ]
 })
